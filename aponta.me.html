@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style type="text/css">
+        div {
+            text-align: center;
+            padding: 5px;
+        }
+        hr {
+            border: 1px solid black;
+            padding: 0px;
+            margin: 0px;
+        }
+        #apontame {
+            margin-bottom: 5px;
+            font-size: 1.5em;
+        }
+    </style>
+    <script src='jquery.js'></script>
+    <script>
+
+    window.addEventListener("load", windowLoaded, false);
+    function windowLoaded() {
+        chrome.tabs.getSelected(null, function(tab) {
+            apontame(tab.url);
+        });
+    }
+    
+    apontame = function(url) {
+        $.ajax({
+            timeout: 10000,
+            url: "http://www.aponta.me/add",
+            data: ({'wt': 'json', 'url': url}),
+            dataType: 'json',
+            type: "GET",
+            success: function(data) {
+                if(data.shortURL == 'null'){
+                    showShortUrl('Ops! Falhei =/');
+                } else {
+                    showShortUrl(data.shortURL);
+                    generateQR(data.shortURL);
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                showShortUrl('Ops! Falhei =/');
+            }
+        });
+    };
+    
+    generateQR = function(url){
+        $("#qrCode img").attr('src', "http://chart.apis.google.com/chart?chs=200x200&cht=qr&chl="+url).fadeIn();
+    }
+    
+    showShortUrl = function(url) {
+        $("#apontame").html(url);
+    }
+    
+    </script>
+</head>
+<body>
+    
+    <div class="logo">
+        <img src="apontame.png" alt="aponta.me"/>
+    </div>
+    
+    <div id="apontame">
+        <img src="loader.gif" alt="aponta.me"/>
+    </div>
+    
+    <hr />
+    
+    <div id="qrCode">
+        <img src="" alt="" style="display:none"/>
+    </div>
+</body>
+</html>
