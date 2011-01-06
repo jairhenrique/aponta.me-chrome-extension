@@ -53,7 +53,13 @@
     }
     
     showShortUrl = function(url) {
-        $("#apontame").html(url);
+        var htmlUrl = '<input type="text" id="txtUrl" value="'+url+'" size="17">'+
+                    '<input type="button" id="copyUrl" value="Copiar">';
+        $("#apontame").html(htmlUrl);
+        $("#copyUrl").click(function(){
+          $("#txtUrl").select(); 
+          document.execCommand("copy", false, null);
+        });
     }
     
     </script>
