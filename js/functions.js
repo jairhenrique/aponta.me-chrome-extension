@@ -38,10 +38,10 @@ showShortUrl = function(url, hasShortUrl) {
 		htmlUrl += '<input type="button" id="copyUrl" value="Copiar">';
 					
 		$("#apontame").html(htmlUrl);
-		$("#copyUrl").click(function(){
-			$("#txtUrl").select(); 
+		$("#copyUrl").click(function() {
+			$("#txtUrl").select();
 			document.execCommand("copy", false, null);
-			$(this).val("Link copiado!");
+			$(this).val("Link copiado!").focus();
 		});
 	} else {
 		$("#apontame").html(url);

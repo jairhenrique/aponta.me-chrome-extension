@@ -19,6 +19,9 @@ hr {
 	font-size: 14px;
 }
 
+#txtUrl:focus, #copyUrl:focus {
+	outline: none;
+}
 
 /* Botão */
 #copyUrl {

@@ -3,7 +3,7 @@
 	"version": "1.1",
 	"description": "Apontame",
 	"browser_action": {
-		"default_icon": "images/ico.ico",
+		"default_icon": "ico.ico",
 		"popup": "aponta.me.html"
 	},
 	"permissions": ["tabs", "http://*/*", "https://*/*"],
