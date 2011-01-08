@@ -1,0 +1,41 @@
+div {
+    text-align: center;
+    padding: 5px;
+}
+hr {
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+}
+#apontame {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+#txtUrl {
+	width: 100%;
+	border: 0px;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+/* Botão */
+#copyUrl {
+    background: #222 url(overlay.png) repeat-x;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border: 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}        
+#copyUrl, #copyUrl:visited {  background-color: #ff5c00; }
+#copyUrl:hover { background-color: #d45500; }
