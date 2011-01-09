@@ -3,7 +3,7 @@ div {
     padding: 5px;
 }
 hr {
-    border: 1px solid black;
+    border: 1px dashed #ccc;
     padding: 0px;
     margin: 0px;
 }
