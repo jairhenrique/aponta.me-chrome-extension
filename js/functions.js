@@ -27,7 +27,7 @@ apontame = function(url) {
 };
 
 generateQR = function(url){
-	$("#qrCode img").attr('src', "http://chart.apis.google.com/chart?chs=200x200&cht=qr&chl="+url).fadeIn();
+	$("#qrCode img").attr('src', url+".qrcode").fadeIn();
 };
 
 showShortUrl = function(url, hasShortUrl) {

@@ -1,9 +1,13 @@
 {
 	"name": "Aponta.me",
-	"version": "1.1",
-	"description": "Apontame",
+	"version": "1.1.1",
+	"description": "Encurtador de url Aponta.me",
+	"icons": { "16": "images/logo_16.jpg",
+	           "48": "images/logo_48.jpg",
+	          "128": "images/logo_128.jpg" },
 	"browser_action": {
-		"default_icon": "ico.ico",
+		"default_title": "Aponta.me",
+		"default_icon": "images/ico.ico",
 		"popup": "aponta.me.html"
 	},
 	"permissions": ["tabs", "http://*/*", "https://*/*"],
