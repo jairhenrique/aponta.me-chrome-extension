@@ -25,7 +25,7 @@ hr {
 
 /* Botão */
 #copyUrl {
-    background: #222 url(overlay.png) repeat-x;
+    background: #222 repeat-x;
 	display: inline-block;
 	padding: 5px 10px 6px;
 	color: #fff;

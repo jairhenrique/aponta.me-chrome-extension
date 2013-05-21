@@ -20,7 +20,7 @@ apontame = function(url) {
 				generateQR(data.shortURL);
 			}
 		},
-		error: function(XMLHttpRequest, textStatus, errorThrown){
+		error: function(){
 			showShortUrl('Ops! Falhei =/', false);
 		}
 	});
@@ -36,7 +36,7 @@ showShortUrl = function(url, hasShortUrl) {
 		htmlUrl += '<input type="text" id="txtUrl" value="'+url+'">';
 		htmlUrl += '<br />';
 		htmlUrl += '<input type="button" id="copyUrl" value="Copiar">';
-					
+
 		$("#apontame").html(htmlUrl);
 		$("#copyUrl").click(function() {
 			$("#txtUrl").select();
